@@ -1,5 +1,6 @@
 import React from 'react';
 import useGoogleSheetData from '../components/Usehooks';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Contact = () => {
   const tabName = 'Contact';
@@ -27,56 +28,55 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-16 bg-gray-100">
+    <section id="contact" className="py-16 bg-gray-100 flex items-center justify-center">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+        <h2 className="text-3xl font-bold text-blue-700 mb-6">Contact Us</h2>
         <p className="text-gray-700 mb-6">
-          We’d love to hear from you! Reach out to us for your irrigation needs.
+          We’d love to hear from you! Reach out to us for your needs.
         </p>
         <div className="space-y-4 text-gray-800">
-          <p><strong>Phone:</strong> {contactInfo.phone}</p>
+          <p>
+            <strong>Phone:</strong> {contactInfo.phone}
+          </p>
           <p>
             <strong>Email:</strong>{' '}
             {contactInfo.email !== 'Not available' ? (
-              <a href={`mailto:${contactInfo.email}`} className="text-green-700">
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="text-blue-700 hover:underline"
+              >
                 {contactInfo.email}
               </a>
             ) : (
               contactInfo.email
             )}
           </p>
-          <div className="space-y-2">
-            <strong>Follow us:</strong>
-            <p>
-              <a
-                href={contactInfo.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-700"
-              >
-                Facebook
-              </a>
-            </p>
-            <p>
-              <a
-                href={contactInfo.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-700"
-              >
-                Instagram
-              </a>
-            </p>
-            <p>
-              <a
-                href={contactInfo.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-700"
-              >
-                Twitter
-              </a>
-            </p>
+          <div className="mt-4 space-x-4 flex justify-center">
+            <strong className="block mb-2">Follow Us:</strong>
+            <a
+              href={contactInfo.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-700 hover:text-green-500 text-2xl"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href={contactInfo.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-700 hover:text-green-500 text-2xl"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href={contactInfo.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-700 hover:text-green-500 text-2xl"
+            >
+              <FaTwitter />
+            </a>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ const Navbar = () => {
     <header className="fixed w-full bg-white shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-green-700">Renaiz Farms</h1>
+        <h1 className="text-2xl font-bold text-blue-700">Renaiz Farms</h1>
 
         {/* Hamburger Menu for Mobile */}
         <button
@@ -42,8 +42,8 @@ const Navbar = () => {
             to="about"
             smooth={true}
             duration={500}
-            className="block text-gray-800 hover:text-green-700 transition cursor-pointer px-6 md:px-0"
-            onClick={() => setIsMenuOpen(false)} // Close menu on link click
+            className="block text-gray-800 hover:text-blue-700 transition cursor-pointer px-6 md:px-0"
+            onClick={() => setIsMenuOpen(false)} 
           >
             About
           </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
             to="product"
             smooth={true}
             duration={500}
-            className="block text-gray-800 hover:text-green-700 transition cursor-pointer px-6 md:px-0"
+            className="block text-gray-800 hover:text-blue-700 transition cursor-pointer px-6 md:px-0"
             onClick={() => setIsMenuOpen(false)}
           >
             Product
@@ -60,7 +60,7 @@ const Navbar = () => {
             to="contact"
             smooth={true}
             duration={500}
-            className="block text-gray-800 hover:text-green-700 transition cursor-pointer px-6 md:px-0"
+            className="block text-gray-800 hover:text-blue-700 transition cursor-pointer px-6 md:px-0"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact Us

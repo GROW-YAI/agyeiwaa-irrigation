@@ -36,7 +36,7 @@ const LandingPage = () => {
             to="product" 
             smooth={true}
             duration={500}
-            className="bg-green-700 px-6 py-3 text-lg rounded-lg font-bold hover:bg-green-800 transition cursor-pointer"
+            className="bg-blue-700 px-6 py-3 text-lg rounded-lg font-bold hover:bg-blue-800 transition cursor-pointer"
           >
             Shop Now
           </Link>
